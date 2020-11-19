@@ -1,0 +1,9 @@
+---
+ - name: test playbook
+   hosts: localhost
+   gather_facts: false
+   become: True
+
+   tasks:
+   - name: Install the tree command
+     yum: name=tree state=latest
