@@ -20,7 +20,8 @@ pipeline {
 			steps{
 				ansiblePlaybook(
 					inventory: '/etc/ansible/hosts',
-					playbook: 'tree_install.yml'
+					playbook: 'tree_install.yml',
+					extraVars: [package: 'wget']
 				)
 			}
 		}
