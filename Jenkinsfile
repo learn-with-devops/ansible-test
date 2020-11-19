@@ -11,7 +11,7 @@ pipeline {
 		stage("Checkout the code"){
 			steps{
 				checkout scm
-				scripts{
+				script{
 					echo "Running scripts line"
 				}
 			}
