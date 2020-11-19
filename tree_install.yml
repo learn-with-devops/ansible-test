@@ -7,3 +7,6 @@
    tasks:
    - name: Install the tree command
      yum: name=tree state=latest
+     
+   - name: Install wget
+     yum: name={{ package }} state=absent
