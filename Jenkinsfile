@@ -10,16 +10,14 @@ pipeline {
 		}
 		stage("Checkout the code"){
 			steps{
-				try{
-					checkout scm
-					script{
-						sh 'sh test.sh'
-						sh 'ls -ltr > list.txt'
-					}
-				} catch(Exception e){
-					echo "catching the exception"
-				} finally {
-					echo "Final Block ececuted"
+				script{
+					try {
+                            sh "sh test.sh"
+                        } catch (Exception err) {
+                            echo 'Shell Script failed'
+                        } finally {
+                            echo "checkout success"
+                        }
 				}
 			}
 		}
