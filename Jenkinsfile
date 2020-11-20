@@ -18,7 +18,7 @@ pipeline {
 					}
 				} catch(e){
 					echo "catching the exception"
-				} finlly {
+				} finally {
 					echo "Final Block ececuted"
 				}
 			}
