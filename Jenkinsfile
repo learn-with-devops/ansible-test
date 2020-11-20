@@ -16,7 +16,7 @@ pipeline {
 						sh 'sh test.sh'
 						sh 'ls -ltr > list.txt'
 					}
-				} catch(e){
+				} catch(Exception e){
 					echo "catching the exception"
 				} finally {
 					echo "Final Block ececuted"
